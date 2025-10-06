@@ -1,0 +1,591 @@
+* {
+        padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    height: 100px;  
+    background-color:rgba(0,0,0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .navhide ul {
+      display: none; /* Hide menu items */
+  }
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100px;
+}
+
+header .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s ease;
+    display: block;
+    padding: 30px 0px;
+}
+
+nav ul li a:hover {
+    color: #d1d5db; /* Light gray hover */
+}
+
+/* Dropdown parent */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* Hide menu by default */
+nav ul li .dropdown-menu {
+    display: block; /* keep it in flow for animation */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    min-width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 7px 30px -20px;
+    z-index: 999;
+    border: 2px solid orangered;
+
+    /* animation starting state */
+    opacity: 0;
+    transform: translateY(-15px); 
+    pointer-events: none; /* prevent click when hidden */
+    transition: all 1s ease;
+}
+
+/* Menu items inside dropdown */
+nav ul li .dropdown-menu li {
+    margin: 0;
+}
+
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding:10px 30px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-size: 13px;
+    transform: translateY(0); /* move up into place */
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+}
+
+nav ul li .dropdown-menu li a:hover {
+    color: #ffffff; /* accent hover */
+    background-color: #ff4d00;
+}
+
+/* Show dropdown on hover */
+
+
+nav ul li:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0px 7px 30px -20px;
+}
+
+
+/* 🔲 Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1001;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #f0f0f0;
+}
+
+/* 📱 Sidebar Navigation */
+.nav-menu {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background: #121212;
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px 20px;
+  z-index: 1000;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+}
+
+/* 🧭 Navigation Items */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 12px 20px;
+  display: block;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: #fd824d;
+  color: #fff;
+}
+
+/* ✅ Active State */
+.nav-menu.active {
+  left: 0;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4400;
+}
+
+/* 📱 Responsive Behavior */
+@media screen and (max-width: 768px) {
+  .secondnav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* 🔽 Dropdown Container */
+.dropdownnn {
+  position: relative;
+}
+
+.dropdown-toggle {
+  position: relative;
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  color: #f5f5f5;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f98960;
+  color: #fff;
+}
+
+/* 🔻 Dropdown Menu */
+.dropdown-menuu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.dropdown-menuu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #f5f5f5;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menuu li a:hover {
+  background-color: #ff4400;
+  color: #fff;
+}
+
+/* 🧠 Show dropdown on hover (desktop) */
+.dropdownnn:hover .dropdown-menuu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 📱 Mobile toggle support */
+.dropdownnn.active .dropdown-menuu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+.hirenow{
+    background-color: #ff4400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+.hirenow a{
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* 🟢 Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+.banner{
+    height: 400px;
+    background-image: url("pics/Logisticsbanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannercontent{
+    text-align: center;
+}
+
+.bannercontent h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.bannercontent div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.bannercontent div p{
+    color: white;
+    font-size: 13px;
+}
+
+.bannercontent div p a{
+    color: rgb(255, 81, 0);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+.jobdetailsintro{
+    max-width: 1100px;
+    margin: 100px auto 0 auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width:600px){
+    .jobdetailsintro h2{
+        font-size: 20px;
+        color: gray;
+    }
+  
+}
+
+
+.jobdetailsintro p{
+    font-size: 13px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.jobdetails {
+  margin-top: 100px;
+  padding: 0 15px;
+}
+
+.jobdetailscontent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.jobdetailsleft {
+  flex: 1 1 100%;
+  background-color: rgb(80, 129, 235);
+  height: auto;
+  border-radius: 10px;
+  padding: 30px 20px 20px 20px;
+  border-top: 4px solid rgb(218, 17, 17);
+  overflow: auto;
+}
+
+.jobdetailsleft ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jobdetailsleft ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 7px 30px;
+  font-size: 13px;
+  border-bottom: 1px solid rgb(3, 95, 186);
+}
+
+.jobdetailsleft ul li a:hover {
+  background-color: #ff4400;
+  color: white;
+}
+
+.jobdetailsright {
+  flex: 1 1 100%;
+  margin-top: 30px;
+}
+
+.jobdetailsright img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.jobdetailsright h1 {
+  font-size: 25px;
+  color: #ff4400;
+  margin-top: 30px;
+}
+
+
+
+.jobdetailsright p {
+  font-size: 13px;
+  color: #848484;
+  padding: 10px 0px;
+}
+
+/* 📱 Responsive Breakpoints */
+@media (min-width: 768px) {
+  .jobdetailscontent {
+    flex-wrap: nowrap;
+  }
+
+  .jobdetailsleft {
+    flex: 0 0 30%;
+    height: 400px;
+  }
+
+  .jobdetailsright {
+    flex: 0 0 70%;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .jobdetailsright h1 {
+    font-size: 30px;
+  }
+
+  .jobdetailsright p {
+    font-size: 15px;
+  }
+
+  .jobdetailsleft ul li a {
+    font-size: 14px;
+  }
+}
+
+
+
+
+.stage5{
+      background-image: linear-gradient(to left, rgba(16, 16, 16, 0.9), rgba(12, 12, 12, 0.9)),
+    url("pics/emprego-trabalho.jpg");
+  margin-top: 100px;
+  /* font-weight: lighter; */
+  
+}
+
+.stage5-content{
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 100px 0px 70px 0px;
+  color: white;
+}
+
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap:50px;
+  grid-column-gap:50px;
+  margin: 0px auto;
+  max-width: 1100px;
+  justify-content:center;
+
+}
+
+@media screen and (max-width:992px){ 
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    padding: 0px 30px;
+    gap: 30px;
+    justify-content: center;
+  }
+  }
+
+.stage5con h1{
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con h1{
+    font-size: 18px;
+  }
+  }
+
+.stage5con ul{
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  width: 200px;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con ul{
+    width: 150px;
+  }
+  }
+
+.stage5con ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.stage5con input{
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+
+}
+
+.stage5con button{
+  background-color: #da0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.social,.street{
+  width: 200px;
+  font-size: 13px;
+}
+
+.social img{
+  width: 30px;
+  padding-top: 10px;
+}
+
+.social ul{
+  display: flex;
+}

@@ -1,0 +1,1078 @@
+* {
+        padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    height: 100px;  
+    background-color:rgba(0,0,0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .navhide ul {
+      display: none; /* Hide menu items */
+  }
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100px;
+}
+
+header .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s ease;
+    display: block;
+    padding: 30px 0px;
+}
+
+nav ul li a:hover {
+    color: #d1d5db; /* Light gray hover */
+}
+
+/* Dropdown parent */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* Hide menu by default */
+nav ul li .dropdown-menu {
+    display: block; /* keep it in flow for animation */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    min-width: 250px;
+    border-radius: 6px;
+    box-shadow: 0 7px 30px -20px;
+    z-index: 999;
+    border: 2px solid orangered;
+
+    /* animation starting state */
+    opacity: 0;
+    transform: translateY(-15px); 
+    pointer-events: none; /* prevent click when hidden */
+    transition: all 1s ease;
+}
+
+/* Menu items inside dropdown */
+nav ul li .dropdown-menu li {
+    margin: 0;
+}
+
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding:10px 30px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-size: 13px;
+    transform: translateY(0); /* move up into place */
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+}
+
+nav ul li .dropdown-menu li a:hover {
+    color: #ffffff; /* accent hover */
+    background-color: #ff4d00;
+}
+
+/* Show dropdown on hover */
+
+
+nav ul li:hover .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    box-shadow: 0px 7px 30px -20px;
+}
+
+
+/* 🔲 Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1001;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #f0f0f0;
+}
+
+/* 📱 Sidebar Navigation */
+.nav-menu {
+  position: fixed;
+  left: -280px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background: #121212;
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px 20px;
+  z-index: 1000;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+}
+
+/* 🧭 Navigation Items */
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 12px 20px;
+  display: block;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background: #fd824d;
+  color: #fff;
+}
+
+/* ✅ Active State */
+.nav-menu.active {
+  left: 0;
+}
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4400;
+}
+
+/* 📱 Responsive Behavior */
+@media screen and (max-width: 768px) {
+  .secondnav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* 🔽 Dropdown Container */
+.dropdownnn {
+  position: relative;
+}
+
+.dropdown-toggle {
+  position: relative;
+  display: block;
+  padding: 12px;
+  font-size: 16px;
+  color: #f5f5f5;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #f98960;
+  color: #fff;
+}
+
+/* 🔻 Dropdown Menu */
+.dropdown-menuu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background-color: #1a1a1a;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.dropdown-menuu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #f5f5f5;
+  border-bottom: 1px solid #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menuu li a:hover {
+  background-color: #ff4400;
+  color: #fff;
+}
+
+/* 🧠 Show dropdown on hover (desktop) */
+.dropdownnn:hover .dropdown-menuu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 📱 Mobile toggle support */
+.dropdownnn.active .dropdown-menuu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+.hirenow{
+    background-color: #ff4400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+}
+
+.hirenow a{
+  color: white;
+  text-decoration: none;
+}
+
+/* the styling for the hero slider begins here */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-image.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  text-align: left;
+  color: white;
+  animation: fadeText 1.5s ease-in-out;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  top: 60%;
+  left: 90px;
+}
+
+@media (max-width: 992px) {
+  .hero-overlay {
+    left: 20px;
+    top: 50%;
+    width: 90%;
+  }
+  }
+
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  /* margin-bottom: 20px; */
+  animation: fadeText 1.5s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .hero-overlay h1{
+    font-size: 25px;
+  }
+  }
+
+.hero-button {
+  padding: 12px 24px;
+  font-size: 1.2em;
+  background-color: #005eff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e65c00;
+}
+
+@keyframes fadeText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+        /* the styling of the grid section begins here */
+.grid-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    height: 120px;
+    align-items: center;    
+    background-color: #eaeaea;
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .grid-section  {
+    display: none;
+  }
+}
+
+.grid-item {
+    border-right: 1px solid #ccc;
+    width: 20%;
+    text-align: center;
+    font-family: poppins, sans-serif;
+}
+
+
+.grid-item a {
+    color: #767676;
+    font-size: 13px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    justify-content: center;
+
+}
+
+.active {
+    color:white;
+    background-color: #ff3700;
+
+}
+
+.grid-item a:hover {
+    color: #ffffff;
+    background-color: #ff3700;
+}
+
+
+/* the styling for the first section begins here */
+
+.section1{
+    margin-top: 70px;
+}
+
+@media (max-width: 992px) {
+  
+.section1  {
+    margin-top: 20px;
+  }
+}
+
+
+/* Section 1 */
+
+
+.section1content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    display: flex;
+    gap: 20px;
+    
+}
+
+@media (max-width: 992px) {
+  .section1content {
+    flex-direction: column;
+  }
+}
+
+
+.sectioncontentleft{
+    display: flex;
+    gap: 10px;
+}
+
+.dots img {
+    width: 50px;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .dots img {
+    width: 20px;
+  }
+}
+
+.sectioncontentleft, .sectionncontentright {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+  
+.sectioncontentleft, .sectionncontentright{
+   width: 100%;
+  }
+}
+
+.sectioncontentleft h1 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Merriweather Sans, sans-serif;    
+    color: #0D59B1;
+}
+
+.sectioncontentleft h2{
+    font-size: 18px;  
+    color: #0D59B1;
+    padding: 0;
+    margin: 0;
+
+}
+
+@media (max-width: 992px) {
+  .sectioncontentleft h2{
+   font-size: 20px;
+  }
+}
+
+
+.line{
+    width: 80px;
+    height: 4px;
+    background-color: #ff4400;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .line {
+   margin-bottom: 20px;
+  }
+}
+
+
+.sectioncontentleft p{
+    font-size: 13px;  
+    color: #898989;  
+}
+
+.sectionncontentright img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.subcontent1 {
+    margin-top: 10px;
+}
+
+
+/* the styling for section2 begin here */
+.section2 {
+  height: 500px;
+  background-image: 
+    linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("pics/emprego-trabalho.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+@media (max-width: 992px) {
+  .section2 {
+    height: auto;
+  }
+}
+
+.section2content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 100px;
+}
+
+@media (max-width: 992px) {
+  .section2content {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+  }
+}
+
+
+.section2left, .section2right{
+    width: 50%;
+    
+}
+
+@media (max-width: 992px) {
+  .section2left, .section2right {
+    width: 100%;
+  }
+}
+
+.section2left h1{
+    color: white;
+    font-size: 25px;
+    
+    line-height: 1.2;
+    font-family: Merriweather Sans, sans-serif;
+}
+
+.section2right p{
+    color: white;
+    font-size: 13px;
+    
+    line-height: 1.6;
+    font-family: Merriweather Sans, sans-serif;
+}
+
+/* the styling for section3 begins here */
+.section3{
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.section3content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+ .section3content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+  }
+}
+
+
+
+.section3left, .section3right{
+    width: 50%; 
+}
+
+@media (max-width: 992px) {
+  .section3left, .section3right {
+    width: 100%;
+  }
+}
+
+.section3content h1{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+
+}
+
+.section3right p{
+    font-size: 13px;
+    color: #898989;
+    line-height: 1.6;
+} 
+
+/* the recruitment section starts here */
+
+.ourservices{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ourservicesheader{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+
+.ourservicesheader h2{
+ color: #0D59B1;
+}
+
+.ourservicescontent{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 992px) {
+ .ourservicescontent {
+    grid-template-columns: auto;
+    gap: 50px;
+    padding: 0px 20px;
+  }
+}
+
+.ourservicescard{
+    margin-top: 50px;
+    width: 350px;
+    border: 1px solid rgb(255, 64, 0);
+}
+
+@media (max-width: 992px) {
+ .ourservicescard {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.servicardtext{
+    padding: 20px;
+    text-align: left;
+
+}
+
+.ourservicescard h2{
+    font-weight: lighter;
+    color: #0D59B1;
+    margin-bottom: 10px;
+    font-family: poppins;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.ourservicescard p{
+font-size: 13px;
+color: #767676;
+}
+.ourservicescard img{
+    width: 100%;
+}
+
+.servicardtext button{
+    background-color: #ff4400;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.servicardtext button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+/* the styling for the ceo message statrs here */
+
+.section1duplicate{
+    background-image: linear-gradient(to left, rgba(16, 16, 16, 0.9), rgba(12, 12, 12, 0.9)),
+    url("pics/emprego-trabalho.jpg");
+    padding: 70px;
+}
+
+@media (max-width: 992px) {
+ .section1duplicate {
+    padding: 0px;
+  }
+  }
+.section1duplicate h2{
+    color: white;
+
+}
+
+@media (max-width: 768px) {
+ .section1duplicate h2{
+    margin-bottom: 20px;
+  }
+  }
+
+.section1duplicate h1{
+    color: white;
+
+}
+
+
+/* the styling for the recruitment stage starts here */
+
+.recruitment-section {
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.recruitment-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+@media (max-width: 992px) {
+  .recruitment-container {
+    flex-direction: column-reverse;
+    text-align: left;
+    padding: 0px 20px;
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+.recruitment-image, .recruitment-text {
+  width: 50%;
+}
+
+
+
+@media (max-width: 992px) {
+  .recruitment-text, .recruitment-image {
+    width: 100%;
+  }
+}
+
+.recruitment-text h1 {
+  font-size: 27px;
+  color: #0D59B1;
+}
+
+@media (max-width: 992px) {
+  .recruitment-text h1 {
+    font-size:20px ;
+  }
+}
+
+.recruitment{
+    color: #ff5500;
+}
+.recruitment-text h2 {
+  font-size: 15px;
+  color: #0D59B1;
+  margin-bottom: 10px;
+}
+
+.recruitment-text p {
+  font-size:  13px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+@media (max-width: 992px) {
+  .enquiry-section h1 {
+  font-size: 20px;
+  color: #0D59B1;
+  margin-bottom: 10px;
+}
+}
+
+.progress-group label {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #0D59B1;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Responsive */
+
+
+
+
+/* the logoslider starts here */
+
+.logo-slider {
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 10); /* Adjust based on number of logos */
+  animation: scroll 20s linear infinite;
+}
+
+@media (max-width: 992px) {
+ .slider-track {
+    width: calc(180px * 10); /* Adjust based on number of logos */
+    animation: scroll 15s linear infinite;
+  }
+  }
+
+.logo {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logocom img {
+    width: 300px;
+    object-fit: contain;
+}
+
+.logo img:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    flex: 0 0 180px;
+  }
+
+  .slider-track {
+    width: calc(180px * 10);
+  }
+}
+
+
+/* the styling for the footer starts here */
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* 🟢 Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+
+.stage5{
+      background-image: linear-gradient(to left, rgba(16, 16, 16, 0.9), rgba(12, 12, 12, 0.9)),
+    url("pics/emprego-trabalho.jpg");
+  margin-top: 100px;
+  /* font-weight: lighter; */
+  
+}
+
+.stage5-content{
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 100px 0px 70px 0px;
+  color: white;
+}
+
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap:50px;
+  grid-column-gap:50px;
+  margin: 0px auto;
+  max-width: 1100px;
+  justify-content:center;
+
+}
+
+@media screen and (max-width:992px){ 
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    padding: 0px 30px;
+    gap: 30px;
+    justify-content: center;
+  }
+  }
+
+.stage5con h1{
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con h1{
+    font-size: 18px;
+  }
+  }
+
+.stage5con ul{
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  width: 200px;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con ul{
+    width: 150px;
+  }
+  }
+
+.stage5con ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.stage5con input{
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+
+}
+
+.stage5con button{
+  background-color: #da0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.social,.street{
+  width: 200px;
+  font-size: 13px;
+}
+
+.social img{
+  width: 30px;
+  padding-top: 10px;
+}
+
+.social ul{
+  display: flex;
+}
+
+
+/* ################################################### */
+
+
