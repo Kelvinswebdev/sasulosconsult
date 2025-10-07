@@ -9,7 +9,7 @@ body {
 }
 
 
-.header {
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -44,12 +44,7 @@ header .container {
     height: 100px;
 }
 
-@media screen and (max-width: 992px) {
-  .container {
-      background-color: white;
-      box-shadow: 0px 7px 30px -20px ;
-  }
-}
+
 
 header .logo {
     font-size: 1.25rem;
