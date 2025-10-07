@@ -9,7 +9,7 @@ body {
 }
 
 
-header {
+.header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,6 +17,16 @@ header {
     height: 100px;  
     background-color:rgba(0,0,0, 0.2);
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .logo img {
+      width: 120px;
+  }
+}
+
+
 
 @media screen and (max-width: 768px) {
   .navhide ul {
@@ -32,6 +42,13 @@ header .container {
     margin: 0 auto;
     padding: 0 1rem;
     height: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+      background-color: white;
+      box-shadow: 0px 7px 30px -20px ;
+  }
 }
 
 header .logo {
@@ -473,11 +490,12 @@ nav ul li:hover .dropdown-menu {
   
 .sectioncontentleft, .sectionncontentright{
    width: 100%;
+   margin-top: 50px;
   }
 }
 
 .sectioncontentleft h1 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     font-family: Merriweather Sans, sans-serif;    
     color: #0D59B1;
@@ -514,7 +532,8 @@ nav ul li:hover .dropdown-menu {
 
 .sectioncontentleft p{
     font-size: 13px;  
-    color: #898989;  
+    color: #898989; 
+    line-height: 1.9; 
 }
 
 .sectionncontentright img {
@@ -549,6 +568,7 @@ nav ul li:hover .dropdown-menu {
 @media (max-width: 992px) {
   .section2 {
     height: auto;
+    margin-top: 100px;
   }
 }
 
@@ -688,6 +708,8 @@ nav ul li:hover .dropdown-menu {
  .ourservicescard {
     width: 100%;
     margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 7px 30px -20px;
   }
 }
 
@@ -712,6 +734,12 @@ color: #767676;
 }
 .ourservicescard img{
     width: 100%;
+}
+
+@media (max-width: 992px) {
+ .ourservicescard img {
+    border-radius: 20px 20px 0px 0px;
+  }
 }
 
 .servicardtext button{
@@ -741,12 +769,13 @@ color: #767676;
 .section1duplicate{
     background-image: linear-gradient(to left, rgba(16, 16, 16, 0.9), rgba(12, 12, 12, 0.9)),
     url("pics/emprego-trabalho.jpg");
-    padding: 70px;
+    padding: 50px 20px 100px 20px;
 }
 
 @media (max-width: 992px) {
  .section1duplicate {
-    padding: 0px;
+    padding-bottom:50px;
+    margin-top: 100px;
   }
   }
 .section1duplicate h2{
