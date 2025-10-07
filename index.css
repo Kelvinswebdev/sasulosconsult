@@ -526,6 +526,12 @@ nav ul li:hover .dropdown-menu {
     margin-top: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .banner img {
+      display: none; /* Hide menu items */
+  }
+}
+
 
 /* the styling for section2 begin here */
 .section2 {
