@@ -92,7 +92,7 @@ nav ul li .dropdown-menu {
     border-radius: 6px;
     box-shadow: 0 7px 30px -20px;
     z-index: 999;
-    border: 2px solid orangered;
+    border: 2px solid rgb(5, 50, 148);
 
     /* animation starting state */
     opacity: 0;
@@ -120,7 +120,7 @@ nav ul li .dropdown-menu li a {
 
 nav ul li .dropdown-menu li a:hover {
     color: #ffffff; /* accent hover */
-    background-color: #ff4d00;
+    background-color: #076edb;
 }
 
 /* Show dropdown on hover */
@@ -268,7 +268,7 @@ nav ul li:hover .dropdown-menu {
 }
 
 .dropdown-menuu li a:hover {
-  background-color: #ff4400;
+  background-color: #0723b4;
   color: #fff;
 }
 
@@ -289,7 +289,7 @@ nav ul li:hover .dropdown-menu {
 
 
 .hirenow{
-    background-color: #ff4400;
+    background-color: #021da8;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -327,13 +327,13 @@ nav ul li:hover .dropdown-menu {
 
 .hero-overlay {
   position: absolute;
-  text-align: left;
+  text-align: center;
   color: white;
   animation: fadeText 1.5s ease-in-out;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  top: 60%;
+  top: 40%;
   left: 90px;
 }
 
