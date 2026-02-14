@@ -345,6 +345,16 @@ display: block;
   transition: opacity 1.5s ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+.hero-image {
+  
+  width: 100%;
+  background-size: contain;
+}
+
+
+}
+
 .hero-image.active {
   opacity: 1;
 }
@@ -379,6 +389,12 @@ display: block;
 @media (max-width: 992px) {
   .hero-overlay h1{
     font-size: 25px;
+  }
+  }
+
+  @media (max-width: 768px) {
+  .hero-overlay h1{
+    font-size: 45px;
   }
   }
 
