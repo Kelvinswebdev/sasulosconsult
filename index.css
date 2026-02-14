@@ -379,6 +379,14 @@ display: block;
   }
   }
 
+  @media (max-width: 768px) {
+  .hero-overlay {
+    left: 20px;
+    top: 25%;
+    width: 90%;
+  }
+  }
+
 
 .hero-overlay h1 {
   font-size: 3rem;
@@ -394,7 +402,7 @@ display: block;
 
   @media (max-width: 768px) {
   .hero-overlay h1{
-    font-size: 45px;
+    font-size: 30px;
   }
   }
 
