@@ -353,12 +353,9 @@ display: block;
 
 @media screen and (max-width: 768px) {
 .hero-image {
-  
   width: 100%;
   background-size: contain;
 }
-
-
 }
 
 .hero-image.active {
