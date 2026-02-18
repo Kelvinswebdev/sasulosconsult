@@ -18,6 +18,13 @@ header {
     background-color:rgba(0,0,0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    background-color:none;
+    
+  }
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -288,6 +295,8 @@ nav ul li:hover .dropdown-menu {
 
 
 
+
+
 .hirenow{
     background-color: #021da8;
     color: white;
@@ -296,6 +305,13 @@ nav ul li:hover .dropdown-menu {
     border: none;
     width: 200px;
     border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .hirenow {
+    margin-top: 20px;
+    background-color: #000000;
+  }
 }
 
 .hirenowfirst{
@@ -380,6 +396,7 @@ display: block;
 @media (max-width: 992px) {
   .hero-overlay {
     padding: 0px 20px;
+    margin-top: 30px;
   }
   }
 
@@ -400,9 +417,18 @@ display: block;
 
   @media (max-width: 768px) {
   .hero-overlay h1{
-    font-size: 30px;
+    font-size: 20px;
   }
   }
+
+    @media (max-width: 768px) {
+  .hero-overlay p{
+    font-size: 13px;
+  }
+  }
+
+
+  
 
 .hero-button {
   padding: 12px 24px;
@@ -415,6 +441,12 @@ display: block;
   margin-top: 20px;
   transition: background-color 0.3s ease;
 }
+
+  @media (max-width: 768px) {
+  .hero-button{
+    margin-top: 20px;
+  }
+  }
 
 .hero-button:hover {
   background-color: #e65c00;
