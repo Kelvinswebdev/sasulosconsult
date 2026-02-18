@@ -311,7 +311,7 @@ display: none;
   }
 
 .hirenowfirst a:hover{ 
-    background-color: #021da8;
+    background-color: #010a34;
     border-radius: 50px;
 }
 
@@ -407,7 +407,7 @@ display: block;
 .hero-button {
   padding: 12px 24px;
   font-size: 13px;
-  background-color: #005eff;
+  background-color: #a5c3f7;
   border: none;
   border-radius: 10px;
   color: white;
