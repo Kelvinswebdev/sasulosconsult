@@ -8,8 +8,8 @@ const messages = [
     text: "Discover top-tier talent tailored to your organization’s needs."
   },
   {
-    title: "Build Your Dream Team ",
-    text: "We connect visionary companies with professionals who drive innovation and elevate culture."
+    title: "Connecting Saudi companies to Ghana’s most reliable workforce",
+    text: "A trusted bridge between skilled labour and serious employers."
   },
   {
     title: "Recruit Smarter From Ghana",
