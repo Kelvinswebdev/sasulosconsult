@@ -4,8 +4,8 @@ const paragraph = document.getElementById('hero-paragraph');
 
 const messages = [
   {
-    title: "Recruit Skilled Ghanaians Today",
-    text: "Discover top-tier talent tailored to your organization’s needs."
+    title: "We supply competent Ghanaian manpower to Saudi companies",
+    text: "Reliable Ghanaian workers delivered with structure, integrity, and speed."
   },
   {
     title: "Connecting Saudi companies to Ghana’s most reliable workforce",
@@ -14,6 +14,10 @@ const messages = [
   {
     title: "Recruit Smarter From Ghana",
     text: "Streamline your hiring process with insight-driven strategies and real human connection."
+  },
+    {
+    title: " Connect with  our sourced, screened and readyGhanaian workers",
+    text: "Connect with skilled Ghanaian workers without the stress of recruitment delays."
   }
 ];
 
