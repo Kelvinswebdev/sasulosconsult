@@ -369,6 +369,8 @@ display: block;
   height: 100%;
   background-size: cover;
   background-position: center;
+  transform: scale(1);
+  will-change: transform;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
@@ -382,6 +384,7 @@ display: block;
 
 .hero-image.active {
   opacity: 1;
+  animation: zoomEffect 5s ease-in-out forwards;
 }
 
 .hero-overlay {
@@ -781,7 +784,7 @@ display: block;
 .ourservicescard{
     margin-top: 50px;
     width: 350px;
-    border: 1px solid rgb(255, 64, 0);
+    /* border: 1px solid rgb(255, 64, 0); */
 }
 
 @media (max-width: 992px) {
@@ -823,7 +826,7 @@ color: #767676;
 }
 
 .servicardtext button{
-    background-color: #ff4400;
+    background-color: #005eff;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -847,7 +850,7 @@ color: #767676;
 /* the styling for the ceo message statrs here */
 
 .section1duplicate{
-    background-image: linear-gradient(to left, rgba(2, 25, 108, 0.9), rgba(0, 31, 115, 0.9)),
+    background-image: linear-gradient(to left, rgba(0, 70, 135, 0.9), rgba(1, 68, 143, 0.9)),
     url("pics/emprego-trabalho.jpg");
     padding: 150px 30px;
     margin-top: 100px;
@@ -1191,4 +1194,12 @@ color: #767676;
 
 /* ################################################### */
 
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 

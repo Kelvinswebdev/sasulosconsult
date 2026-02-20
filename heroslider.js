@@ -15,8 +15,8 @@ const messages = [
     title: "Recruit Smarter From Ghana",
     text: "Streamline your hiring process with insight-driven strategies and real human connection."
   },
-    {
-    title: " Connect with  our sourced, screened and readyGhanaian workers",
+  {
+    title: "Connect with our sourced, screened and ready Ghanaian workers",
     text: "Connect with skilled Ghanaian workers without the stress of recruitment delays."
   }
 ];
@@ -25,18 +25,13 @@ let current = 0;
 
 function showNextImage() {
   images[current].classList.remove('active');
+
   current = (current + 1) % images.length;
+
   images[current].classList.add('active');
 
   heading.textContent = messages[current].title;
   paragraph.textContent = messages[current].text;
-
-  // Re-trigger text animation
-  const overlay = document.querySelector('.hero-overlay');
-  overlay.style.animation = 'none';
-  overlay.offsetHeight; // trigger reflow
-  overlay.style.animation = '';
 }
 
-setInterval(showNextImage, 5000); // Change every 5 seconds
-
+setInterval(showNextImage, 5000);
