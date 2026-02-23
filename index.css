@@ -633,6 +633,18 @@ display: block;
   }
 }
 
+.implement{
+
+    margin-top: 20px;
+}
+
+.implement ul li{
+    list-style-type: none;
+    padding: 5px 0px;
+    color: #898989;
+    font-size: 13px;
+    line-height: 1.7;
+}
 
 /* the styling for section2 begin here */
 .section2 {
@@ -750,7 +762,11 @@ display: block;
 } 
 
 /* the recruitment section starts here */
-
+.section4{
+    background-color: #100000;
+    padding: 100px 0px;
+    margin-top:150px;
+}
 .ourservices{
     max-width: 1100px;
     margin: 0 auto;
@@ -850,7 +866,7 @@ color: #767676;
 /* the styling for the ceo message statrs here */
 
 .section1duplicate{
-    background-image: linear-gradient(to left, rgba(0, 70, 135, 0.9), rgba(1, 68, 143, 0.9)),
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
     url("pics/emprego-trabalho.jpg");
     padding: 150px 30px;
     margin-top: 100px;
@@ -863,7 +879,7 @@ color: #767676;
   }
   }
 .section1duplicate h2{
-    color: white;
+    color: rgb(0, 36, 135);
 
 }
 
