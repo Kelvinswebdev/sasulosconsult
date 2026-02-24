@@ -869,7 +869,6 @@ color: #767676;
 .section1duplicate{
     background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
     url("pics/emprego-trabalho.jpg");
-    padding: 150px 30px;
     margin-top: 100px;
 }
 
