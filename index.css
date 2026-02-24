@@ -863,15 +863,12 @@ color: #767676;
 
 /* why choose us section starts here */ */
 
-.why-choose {
-  padding: 100px;
-  background: #8f1010;
-  font-family: 'Segoe UI', sans-serif;
-}
+
 
 .container {
   max-width: 1200px;
   margin: auto;
+  padding:  50px;
 }
 
 .section-header {
