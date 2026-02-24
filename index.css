@@ -1177,24 +1177,8 @@ color: #767676;
   color: #6b7280;
 }
 
-.arrow {
-  position: absolute;
-  top: 45%;
-  transform: translateY(-50%);
-  background: #0f172a;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-}
 
-.arrow.prev { left: -10px; }
-.arrow.next { right: -10px; }
 
-.arrow:hover {
-  background: #1e293b;
-}
 
 .dots {
   text-align: center;
