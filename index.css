@@ -861,14 +861,17 @@ color: #767676;
 
 
 
-/* why choose us section starts here */ */
+/* why choose us section starts here */ 
 
-
+.why-choose {
+  padding: 100px 30px;
+  background: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
 
 .container {
   max-width: 1200px;
   margin: auto;
-  padding:  50px;
 }
 
 .section-header {
@@ -880,6 +883,7 @@ color: #767676;
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #0D59B1;
 }
 
 .section-header p {
@@ -912,7 +916,7 @@ color: #767676;
 .icon {
   width: 50px;
   height: 50px;
-  background: #0f172a;
+  background: #215ce4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -936,6 +940,7 @@ color: #767676;
   color: #6b7280;
   line-height: 1.6;
 }
+
 
 
 
