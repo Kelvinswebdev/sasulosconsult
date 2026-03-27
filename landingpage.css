@@ -1,0 +1,230 @@
+:root {
+            --primary: #FF8C00; /* Industrial Orange */
+            --dark-bg: #0a0a0b;
+            --card-bg: #161618;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Modern Glass Navigation */
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; }
+        .logo span { color: var(--primary); }
+
+        /* Hero Section with High-Impact Image */
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content { max-width: 800px; }
+        h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
+        h1 span { color: var(--primary); }
+
+        .btn-main {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+        }
+
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5); }
+
+        /* Modern Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 100px 10%;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .stat-card:hover { border-color: var(--primary); background: #1c1c1e; }
+        .stat-card h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; font-family: 'Montserrat'; }
+
+        /* Form Styling */
+        .form-container {
+            padding: 100px 10%;
+            background: #0f0f11;
+        }
+
+        .glass-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #252528;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus { border-color: var(--primary); }
+
+        footer { text-align: center; padding: 50px; color: var(--text-dim); border-top: 1px solid #222; }
+
+
+        .stage5{
+      background-image: linear-gradient(to left, rgba(16, 16, 16, 0.9), rgba(12, 12, 12, 0.9)),
+    url("pics/emprego-trabalho.jpg");
+  margin-top: 100px;
+  /* font-weight: lighter; */
+  
+}
+
+.stage5-content{
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 100px 0px 70px 0px;
+  color: white;
+}
+
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap:50px;
+  grid-column-gap:50px;
+  margin: 0px auto;
+  max-width: 1100px;
+  justify-content:center;
+
+}
+
+@media screen and (max-width:992px){ 
+.stage5con{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+    padding: 0px 30px;
+    gap: 30px;
+    justify-content: center;
+  }
+  }
+
+.stage5con h1{
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con h1{
+    font-size: 18px;
+  }
+  }
+
+.stage5con ul{
+  margin: 0px;
+  list-style-type: none;
+  padding: 0px;
+  width: 200px;
+}
+
+@media screen and (max-width:700px){ 
+  .stage5con ul{
+    width: 150px;
+  }
+  }
+
+.stage5con ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.stage5con input{
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+
+}
+
+.stage5con button{
+  background-color: #004cda;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.social,.street{
+  width: 200px;
+  font-size: 13px;
+}
+
+.social img{
+  width: 30px;
+  padding-top: 10px;
+}
+
+.social ul{
+  display: flex;
+}
+
+
+/* ################################################### */
+
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
