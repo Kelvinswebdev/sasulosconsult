@@ -71,19 +71,31 @@
 <section class="form-container" id="contact">
     <div class="glass-form" data-aos="fade-up">
         <h2 style="margin-bottom: 30px; text-align: center; font-family: 'Montserrat';">Secure Your Pipeline</h2>
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="Company Name" required>
-            <select>
-                <option>Number of Drivers Needed</option>
-                <option>1-5 Drivers</option>
-                <option>6-15 Drivers</option>
-                <option>20+ Fleet Expansion</option>
+        <form name="Sasulos Employer Inquiry" action="https://formspree.io/f/xlgogedr" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="text" name="company" placeholder="Company Name" required />
+            <input type="email" name="email" placeholder="Business Email" required />
+
+            <select name="requirement">
+            <option>Truck Drivers</option>
+            <option>Forklift Operators</option>
+            <option>Heavy Equipment Operators</option>
+            <option>General Labour</option>
             </select>
-            <input type="email" placeholder="Business Email" required>
-            <textarea rows="4" placeholder="Specific Requirements..."></textarea>
-            <button type="submit" class="btn-main" style="width: 100%; border: none; cursor: pointer;">SUBMIT ENQUIRY</button>
+
+            <textarea name="details" placeholder="Your Hiring Needs"></textarea>
+            <button type="submit"
+            class="cta-button">
+            Request Workers Now
+            </button>
         </form>
+
+        <p style="text-align:center; margin-top:20px;">
+        Need urgent assistance? 
+        <a href="https://wa.me/233542381294" target="_blank" style="color:blue;">
+            Message us on WhatsApp
+        </a>
+</p>
     </div>
 </section>
 
@@ -91,36 +103,12 @@
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 1000, once: true });
-
-    document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // 1. Get the form data
-    const name = document.querySelector('input[placeholder="Full Name"]').value;
-    const company = document.querySelector('input[placeholder="Company Name"]').value;
-    const drivers = document.querySelector('select').value;
-    const email = document.querySelector('input[placeholder="Business Email"]').value;
-    const requirements = document.querySelector('textarea').value;
-
-    // 2. Your WhatsApp Number (Include country code, no + or spaces)
-    const myNumber = "233201420603"; // REPLACE WITH YOUR ACTUAL NUMBER
-
-    // 3. Create the professional message
-    const message = `*NEW INQUIRY: SASULOS GLOBAL*%0A%0A` +
-                    `*Name:* ${name}%0A` +
-                    `*Company:* ${company}%0A` +
-                    `*Requirement:* ${drivers}%0A` +
-                    `*Email:* ${email}%0A` +
-                    `*Details:* ${requirements}`;
-
-    // 4. Open WhatsApp
-    const whatsappUrl = `https://wa.me/${myNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank').focus();
-
-    // 5. Optional: Clear the form
-    this.reset();
+document.querySelector("form").addEventListener("submit", function() {
+  setTimeout(() => {
+    alert("Thank you. Your request has been received.\n\nIf your request is urgent, please send us a message on WhatsApp for a faster response.");
+  }, 500);
 });
+</script>
 </script>
 
 
