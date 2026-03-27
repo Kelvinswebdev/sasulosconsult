@@ -44,7 +44,10 @@
             background-position: center;
         }
 
-        .hero-content { max-width: 800px; }
+        .hero-content 
+        { max-width:800px; 
+        margin-top: 20%;
+        }
         h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
         h1 span { color: var(--primary); }
 
