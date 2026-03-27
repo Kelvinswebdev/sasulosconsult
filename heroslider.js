@@ -8,7 +8,7 @@ const messages = [
     text: "Reliable Ghanaian workers delivered with structure, integrity, and speed."
   },
   {
-    title: "Connecting Saudi companies to Ghana’s most reliable workforce",
+    title: "Connecting your company to Ghana’s most reliable workforce",
     text: "A trusted bridge between skilled labour and serious employers."
   },
   {
