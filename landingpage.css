@@ -38,8 +38,8 @@
             display: flex;
             align-items: center;
             padding: 0 10%;
-            background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2)), 
-                        url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=2070&auto=format&fit=crop'); 
+            background-image: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2)), 
+                        url('pics/pexels-kelly-4320464.jpg'); 
             background-size: cover;
             background-position: center;
         }
