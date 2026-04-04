@@ -4,7 +4,7 @@ const paragraph = document.getElementById('hero-paragraph');
 
 const messages = [
   {
-    title: "We supply competent Ghanaian manpower to Saudi companies",
+    title: "We supply competent Ghanaian manpower to Australia and the middle-east most demanding industries",
     text: "Reliable Ghanaian workers delivered with structure, integrity, and speed."
   },
   {
