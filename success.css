@@ -1,0 +1,46 @@
+/* --- Success Page Specifics --- */
+
+.success-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #28a745; /* Success Green */
+    margin-bottom: 20px;
+}
+
+.success-container h1 {
+    color: var(--sasulos-navy);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.success-container p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.score-badge {
+    display: inline-block;
+    background: var(--light-bg);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--sasulos-gold);
+    color: var(--sasulos-navy);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.next-steps-box {
+    background: #fdf9f0;
+    border: 1px dashed var(--sasulos-gold);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: left;
+}

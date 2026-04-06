@@ -1,0 +1,147 @@
+:root {
+    --sasulos-navy: #0a1d37;
+    --sasulos-gold: #c5a059; /* Sophisticated gold for accents */
+    --light-bg: #f8f9fa;
+    --text-main: hsl(0, 0%, 20%);
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Header & Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(10, 29, 55, 0.3), rgba(10, 29, 55, 0.9)), 
+                url('pics/1755589209871.jpg');
+    background-size: cover;
+    color: var(--white);
+    background-position: top;
+    padding: 100px 20px;
+    text-align: center;
+    height: 75vh;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+
+/* Premium Card Container */
+.container {
+    max-width: 1000px;
+    margin: -50px auto 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ccc;
+    position: relative;
+}
+
+.step.active { color: var(--sasulos-navy); }
+.step.active::after { content: ''; display: block; height: 4px; background: var(--sasulos-gold); margin-top: 8px; border-radius: 2px; }
+
+/* Forms & Buttons */
+.btn-primary {
+    background-color: var(--sasulos-gold);
+    color: var(--sasulos-navy);
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #b38f48;
+    transform: translateY(-2px);
+}
+
+/* --- Verification Page Specifics --- */
+
+/* The 6-digit code input style */
+.code-input-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.code-input {
+    width: 100%;
+    max-width: 280px; /* Keeps it centered and neat */
+    padding: 15px;
+    text-align: center;
+    font-size: 28px; /* Large for "Premium" feel */
+    font-weight: 700;
+    letter-spacing: 8px; /* Spaces out the 6 digits */
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    color: var(--sasulos-navy);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.code-input:focus {
+    border-color: var(--sasulos-gold);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+    outline: none;
+}
+
+/* Error Message Styling */
+.error-msg {
+    background-color: #fdf2f2;
+    color: var(--error-red);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #f9d6d6;
+    display: none; /* Hidden by default until JS triggers it */
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Subtle "Shake" animation for wrong codes */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Back Link Styling */
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 13px;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--sasulos-gold);
+}
+
+.back-link strong {
+    color: var(--sasulos-navy);
+}

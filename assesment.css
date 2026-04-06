@@ -1,0 +1,193 @@
+/* --- Global Assessment Variables --- */
+:root {
+    --sasulos-navy: #0a1d37;
+    --sasulos-gold: #c5a059;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-color: #e0e6ed;
+    --success-green: #27ae60;
+}
+
+body {
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Sticky Timer Bar --- */
+.timer-bar {
+    position: sticky;
+    top: 0;
+    background: var(--sasulos-navy);
+    color: var(--white);
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    z-index: 1000;
+    border-bottom: 4px solid var(--sasulos-gold);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#timer {
+    color: var(--sasulos-gold);
+    margin-left: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Main Container --- */
+.assessment-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.assessment-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 20px;
+}
+
+.assessment-header h2 {
+    color: var(--sasulos-navy);
+    margin: 10px 0 5px;
+}
+
+/* --- Section & Question Logic --- */
+.form-section {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s ease;
+}
+
+.form-section.active {
+    display: block; /* Shown when JS triggers 'active' */
+}
+
+.section-header {
+    background: var(--sasulos-navy);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-left: 6px solid var(--sasulos-gold);
+}
+
+.question-card {
+    margin-bottom: 35px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.question-card:hover {
+    border-color: var(--sasulos-gold);
+    background: #fffdf9;
+}
+
+.q-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--sasulos-navy);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* --- Custom Radio Options --- */
+.option {
+    display: block;
+    position: relative;
+    padding: 12px 15px 12px 45px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    background: #f0f4f8;
+}
+
+.option input {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    accent-color: var(--sasulos-navy);
+}
+
+/* Highlighting the selected answer */
+.option:has(input:checked) {
+    background: #eef4ff;
+    border-color: var(--sasulos-navy);
+    font-weight: 500;
+}
+
+/* --- Buttons --- */
+.btn-next, .btn-submit {
+    display: inline-block;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-next {
+    background-color: var(--sasulos-gold);
+    color: var(--sasulos-navy);
+    float: right; /* Keeps 'Next' on the right */
+}
+
+.btn-next:hover {
+    background-color: #b38f48;
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    background-color: var(--success-green);
+    color: var(--white);
+    width: 100%; /* Final button is prominent */
+}
+
+.btn-submit:hover {
+    background-color: #219150;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Clearfix for the float button */
+.form-section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .assessment-container {
+        margin: 10px;
+        padding: 20px;
+    }
+    .btn-next {
+        width: 100%;
+        float: none;
+    }
+}

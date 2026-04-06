@@ -1,0 +1,55 @@
+/* --- Registration Specific Styles --- */
+
+.reg-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group.full-width {
+    grid-column: span 2;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--sasulos-navy);
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    outline: none;
+    border-color: var(--sasulos-gold);
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+    .input-group.full-width {
+        grid-column: span 1;
+    }
+}

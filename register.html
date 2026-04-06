@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Registration | Sasulos Consult</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <section class="hero" style="height: 30vh; padding: 40px 20px;">
+        <div>
+            <img src="pics/logo-dark.png" width="120" alt="Sasulos Logo">
+            <h1>Candidate Registration</h1>
+            <p>Step 2: Create your professional profile</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="step-indicator">
+            <div class="step">1. Intro</div>
+            <div class="step active">2. Registration</div>
+            <div class="step">3. Verification</div>
+            <div class="step">4. Assessment</div>
+        </div>
+
+        <form onsubmit="alert('Registration Successful! Your Access Code is: 202600. Please enter this on the next screen.');" action="verify.html" class="reg-form">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Full Name (as on Passport)</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number (WhatsApp)</label>
+                    <input type="tel" placeholder="+233..." required>
+                </div>
+
+                <div class="input-group">
+                    <label>Passport / National ID No.</label>
+                    <input type="text" placeholder="GHA-0000000-0" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Preferred Job Category</label>
+                    <select required>
+                        <option value="">-- Select Category --</option>
+                        <option value="healthcare">Healthcare & Nursing</option>
+                        <option value="construction">Construction & Engineering</option>
+                        <option value="hospitality">Hospitality & Tourism</option>
+                        <option value="admin">Admin & Management</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #666; cursor: pointer;">
+                    <input type="checkbox" required style="margin-top: 4px;">
+                    I certify that all information provided is accurate and I authorize Sasulos Consult Ltd to verify my documents with the relevant authorities.
+                </label>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button type="submit" class="btn-primary">Generate My Access Code</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

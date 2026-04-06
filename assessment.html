@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Aptitude Test | Sasulos Consult</title>
+    <link rel="stylesheet" href="assesment.css">
+</head>
+<body>
+
+    <div class="timer-bar">
+        ASSESSMENT IN PROGRESS — TIME REMAINING: <span id="timer">20:00</span>
+    </div>
+
+    <div class="assessment-container">
+        <div class="assessment-header">
+            <img src="pics/logo-dark.png" width="100" alt="Sasulos Logo">
+            <h2>Candidate Competency Evaluation</h2>
+            <p>Sasulos Consult Limited | International Manpower Division</p>
+        </div>
+
+        <form id="assessmentForm">
+            
+            <div class="form-section active" id="section1">
+                <div class="section-header">Section 1: Professional Ethics & Integrity</div>
+                
+                <div class="question-card">
+                    <p class="q-text">1. If you notice a colleague bypassing a safety protocol to finish a task faster, what should you do?</p>
+                    <label class="option"><input type="radio" name="q1" value="A"> Ignore it; it's not your business.</label>
+                    <label class="option"><input type="radio" name="q1" value="B"> Inform your supervisor immediately.</label>
+                    <label class="option"><input type="radio" name="q1" value="C"> Follow their lead to be more efficient.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">2. You are offered a small cash gift by a client to "fast-track" their request. What is the correct response?</p>
+                    <label class="option"><input type="radio" name="q2" value="A"> Accept it as a tip for good service.</label>
+                    <label class="option"><input type="radio" name="q2" value="B"> Politely decline and report the incident.</label>
+                    <label class="option"><input type="radio" name="q2" value="C"> Accept it but don't tell anyone.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">3. Accuracy in documentation is vital. If you make a mistake on a report that has already been submitted, you should:</p>
+                    <label class="option"><input type="radio" name="q3" value="A"> Hope nobody notices.</label>
+                    <label class="option"><input type="radio" name="q3" value="B"> Create a new report and delete the old one secretly.</label>
+                    <label class="option"><input type="radio" name="q3" value="C"> Notify your manager and provide the corrected data.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">4. How do you handle confidential company information?</p>
+                    <label class="option"><input type="radio" name="q4" value="A"> Share it only with close family.</label>
+                    <label class="option"><input type="radio" name="q4" value="B"> Never discuss it outside the workplace.</label>
+                    <label class="option"><input type="radio" name="q4" value="C"> Discuss it only on private social media groups.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">5. A "Conflict of Interest" occurs when:</p>
+                    <label class="option"><input type="radio" name="q5" value="A"> You disagree with your boss.</label>
+                    <label class="option"><input type="radio" name="q5" value="B"> Your personal interests interfere with your professional duties.</label>
+                    <label class="option"><input type="radio" name="q5" value="C"> You have to work overtime.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">6. Being "Punctual" in an international work environment means:</p>
+                    <label class="option"><input type="radio" name="q6" value="A"> Arriving exactly at the start time.</label>
+                    <label class="option"><input type="radio" name="q6" value="B"> Arriving 10-15 minutes early to be ready.</label>
+                    <label class="option"><input type="radio" name="q6" value="C"> Arriving within 10 minutes after the start.</label>
+                </div>
+
+                <button type="button" class="btn-next" onclick="nextSection(2)">Next: Communication Skills</button>
+            </div>
+
+            <div class="form-section" id="section2">
+                <div class="section-header">Section 2: Communication Skills</div>
+                
+                <div class="question-card">
+                    <p class="q-text">7. When sending a professional email to a foreign partner, you should:</p>
+                    <label class="option"><input type="radio" name="q7" value="A"> Use slang to seem friendly.</label>
+                    <label class="option"><input type="radio" name="q7" value="B"> Use clear, formal language and a descriptive subject.</label>
+                    <label class="option"><input type="radio" name="q7" value="C"> Write in all capital letters for emphasis.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">8. If you do not understand an instruction given by a supervisor, you should:</p>
+                    <label class="option"><input type="radio" name="q8" value="A"> Nod and try to figure it out yourself.</label>
+                    <label class="option"><input type="radio" name="q8" value="B"> Ask for clarification immediately.</label>
+                    <label class="option"><input type="radio" name="q8" value="C"> Ask a coworker later.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">9. Active listening involves:</p>
+                    <label class="option"><input type="radio" name="q9" value="A"> Thinking about your reply while the other speaks.</label>
+                    <label class="option"><input type="radio" name="q9" value="B"> Maintaining eye contact and summarizing what was said.</label>
+                    <label class="option"><input type="radio" name="q9" value="C"> Interrupting to show you are paying attention.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">10. In a team meeting, a colleague disagrees with your idea. You should:</p>
+                    <label class="option"><input type="radio" name="q10" value="A"> Take it personally and stop talking.</label>
+                    <label class="option"><input type="radio" name="q10" value="B"> Listen to their perspective and discuss it logically.</label>
+                    <label class="option"><input type="radio" name="q10" value="C"> Tell them their idea is wrong.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">11. Body language (posture, eye contact) accounts for a large part of communication. True or False?</p>
+                    <label class="option"><input type="radio" name="q11" value="A"> True</label>
+                    <label class="option"><input type="radio" name="q11" value="B"> False</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">12. The best way to handle a frustrated customer is to:</p>
+                    <label class="option"><input type="radio" name="q12" value="A"> Tell them to calm down.</label>
+                    <label class="option"><input type="radio" name="q12" value="B"> Listen without interrupting and offer a solution.</label>
+                    <label class="option"><input type="radio" name="q12" value="C"> Hand them over to someone else immediately.</label>
+                </div>
+
+                <button type="button" class="btn-next" onclick="nextSection(3)">Next: Technical Aptitude</button>
+            </div>
+
+            <div class="form-section" id="section3">
+                <div class="section-header">Section 3: Technical Aptitude</div>
+                
+                <div class="question-card">
+                    <p class="q-text">13. Which software is most commonly used for professional business reports?</p>
+                    <label class="option"><input type="radio" name="q13" value="A"> Microsoft Excel</label>
+                    <label class="option"><input type="radio" name="q13" value="B"> Microsoft Word</label>
+                    <label class="option"><input type="radio" name="q13" value="C"> Microsoft PowerPoint</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">14. In a spreadsheet, what is the best way to calculate the sum of a column?</p>
+                    <label class="option"><input type="radio" name="q14" value="A"> Use a calculator and type the number.</label>
+                    <label class="option"><input type="radio" name="q14" value="B"> Use the =SUM() formula.</label>
+                    <label class="option"><input type="radio" name="q14" value="C"> Count them manually.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">15. What does "CC" stand for in an email?</p>
+                    <label class="option"><input type="radio" name="q15" value="A"> Company Copy</label>
+                    <label class="option"><input type="radio" name="q15" value="B"> Carbon Copy</label>
+                    <label class="option"><input type="radio" name="q15" value="C"> Confidential Connection</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">16. If your computer freezes during a task, the first basic troubleshooting step is:</p>
+                    <label class="option"><input type="radio" name="q16" value="A"> Throw it away.</label>
+                    <label class="option"><input type="radio" name="q16" value="B"> Restart the device.</label>
+                    <label class="option"><input type="radio" name="q16" value="C"> Open the hardware casing.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">17. What is the most secure way to store digital work passwords?</p>
+                    <label class="option"><input type="radio" name="q17" value="A"> Write them on a sticky note.</label>
+                    <label class="option"><input type="radio" name="q17" value="B"> Use a secure password manager.</label>
+                    <label class="option"><input type="radio" name="q17" value="C"> Use the same password for everything.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">18. A PDF file is preferred for sending final documents because:</p>
+                    <label class="option"><input type="radio" name="q18" value="A"> It cannot be opened by others.</label>
+                    <label class="option"><input type="radio" name="q18" value="B"> It preserves formatting across all devices.</label>
+                    <label class="option"><input type="radio" name="q18" value="C"> It makes the file size much larger.</label>
+                </div>
+
+                <button type="button" class="btn-next" onclick="nextSection(4)">Next: Situational Judgment</button>
+            </div>
+
+            <div class="form-section" id="section4">
+                <div class="section-header">Section 4: Situational Judgment</div>
+                
+                <div class="question-card">
+                    <p class="q-text">19. You have three tasks with the same deadline. How do you prioritize?</p>
+                    <label class="option"><input type="radio" name="q19" value="A"> Do the easiest one first.</label>
+                    <label class="option"><input type="radio" name="q19" value="B"> Rank them by importance and impact.</label>
+                    <label class="option"><input type="radio" name="q19" value="C"> Start all three at the same time.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">20. You realize you will be 20 minutes late due to traffic. You should:</p>
+                    <label class="option"><input type="radio" name="q20" value="A"> Drive faster and hope for the best.</label>
+                    <label class="option"><input type="radio" name="q20" value="B"> Call your supervisor as soon as you know.</label>
+                    <label class="option"><input type="radio" name="q20" value="C"> Sneak in quietly.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">21. A coworker is struggling while you have finished your work. You should:</p>
+                    <label class="option"><input type="radio" name="q21" value="A"> Leave early since your work is done.</label>
+                    <label class="option"><input type="radio" name="q21" value="B"> Ask your supervisor if you can assist them.</label>
+                    <label class="option"><input type="radio" name="q21" value="C"> Sit at your desk and use your phone.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">22. If equipment you are using starts making a strange noise, you should:</p>
+                    <label class="option"><input type="radio" name="q22" value="A"> Keep using it until it breaks.</label>
+                    <label class="option"><input type="radio" name="q22" value="B"> Turn it off and report it to maintenance.</label>
+                    <label class="option"><input type="radio" name="q22" value="C"> Try to fix it yourself.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">23. You are asked to perform a task you haven't been trained for. You should:</p>
+                    <label class="option"><input type="radio" name="q23" value="A"> Do it anyway to show you are brave.</label>
+                    <label class="option"><input type="radio" name="q23" value="B"> Inform your manager and ask for guidance.</label>
+                    <label class="option"><input type="radio" name="q23" value="C"> Refuse and walk away.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">24. How do you react to constructive criticism from a manager?</p>
+                    <label class="option"><input type="radio" name="q24" value="A"> Become defensive.</label>
+                    <label class="option"><input type="radio" name="q24" value="B"> Accept it as an opportunity to improve.</label>
+                    <label class="option"><input type="radio" name="q24" value="C"> Ignore the advice.</label>
+                </div>
+
+                <button type="button" class="btn-next" onclick="nextSection(5)">Next: Global Awareness</button>
+            </div>
+
+            <div class="form-section" id="section5">
+                <div class="section-header">Section 5: Global Awareness & Logistics</div>
+                
+                <div class="question-card">
+                    <p class="q-text">25. What is "Jet Lag"?</p>
+                    <label class="option"><input type="radio" name="q25" value="A"> A type of airplane fuel.</label>
+                    <label class="option"><input type="radio" name="q25" value="B"> Tiredness caused by traveling across time zones.</label>
+                    <label class="option"><input type="radio" name="q25" value="C"> A fast way to board a plane.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">26. When working in a new country, it is important to:</p>
+                    <label class="option"><input type="radio" name="q26" value="A"> Expect everyone to act like people at home.</label>
+                    <label class="option"><input type="radio" name="q26" value="B"> Research and respect local customs and laws.</label>
+                    <label class="option"><input type="radio" name="q26" value="C"> Only spend time with people from your country.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">27. What does "GMT" stand for in relation to time?</p>
+                    <label class="option"><input type="radio" name="q27" value="A"> General Market Time</label>
+                    <label class="option"><input type="radio" name="q27" value="B"> Greenwich Mean Time</label>
+                    <label class="option"><input type="radio" name="q27" value="C"> Global Map Timing</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">28. What should you do with your travel documents (Passport/Visa)?</p>
+                    <label class="option"><input type="radio" name="q28" value="A"> Keep them in your checked luggage.</label>
+                    <label class="option"><input type="radio" name="q28" value="B"> Keep them in your carry-on or secure pouch.</label>
+                    <label class="option"><input type="radio" name="q28" value="C"> Give them to a stranger for safekeeping.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">29. Why is "Cultural Sensitivity" important in recruitment?</p>
+                    <label class="option"><input type="radio" name="q29" value="A"> It isn't important.</label>
+                    <label class="option"><input type="radio" name="q29" value="B"> It helps build relationships and avoid misunderstandings.</label>
+                    <label class="option"><input type="radio" name="q29" value="C"> It makes the flight shorter.</label>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">30. Before departing for an international job, you should ensure:</p>
+                    <label class="option"><input type="radio" name="q30" value="A"> You have all vaccinations and medical clearances.</label>
+                    <label class="option"><input type="radio" name="q30" value="B"> You have sold all your clothes.</label>
+                    <label class="option"><input type="radio" name="q30" value="C"> You have memorized the entire map.</label>
+                </div>
+
+                <button type="button" onclick="submitAssessment()" class="btn-submit">Finalize & Submit All Answers</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // --- 20 MINUTE TIMER ---
+        let time = 20 * 60;
+        const timerDisplay = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            let mins = Math.floor(time / 60);
+            let secs = time % 60;
+            secs = secs < 10 ? '0' + secs : secs;
+            timerDisplay.innerHTML = `${mins}:${secs}`;
+            
+            if (time <= 0) {
+                clearInterval(countdown);
+                alert("Time is up! Your assessment will be submitted automatically.");
+                submitAssessment();
+            }
+            time--;
+        }, 1000);
+
+        // --- SECTION NAVIGATION ---
+        function nextSection(sectionNumber) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.form-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // Show active section
+            const target = document.getElementById('section' + sectionNumber);
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // --- SUBMIT ---
+        function submitAssessment() {
+            window.location.href = "success.html";
+        }
+
+        window.onbeforeunload = function() {
+    return "Are you sure you want to leave? Your progress will be lost.";
+};
+    </script>
+</body>
+</html>

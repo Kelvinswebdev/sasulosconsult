@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Access | Sasulos Consult</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verify.css">
+</head>
+<body>
+
+    <section class="hero" style="height: 30vh; padding: 40px 20px;">
+        <div>
+            <img src="pics/logo-dark.png" width="120" alt="Sasulos Logo">
+            <h1>Identity Verification</h1>
+            <p>Enter your 6-digit authorization code to unlock the assessment.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="step-indicator">
+            <div class="step">1. Intro</div>
+            <div class="step">2. Registration</div>
+            <div class="step active">3. Verification</div>
+            <div class="step">4. Assessment</div>
+        </div>
+
+        <div class="verify-content">
+            <div id="error-msg" class="error-msg">Invalid code. Please contact your agent.</div>
+            
+            <div class="instruction-text">
+                <p style="font-size: 0.85rem; color: #888;">Enter the 6-digit authorization code shown after registration.</p>
+            </div>
+
+            <div class="code-input-wrapper">
+                <input type="text" id="otp" maxlength="6" placeholder="000000" autofocus>
+            </div>
+
+            <button onclick="validateOTP()" class="btn-primary" style="width: 100%; max-width: 300px;">
+                Verify & Begin Test
+            </button>
+            
+            <div style="margin-top: 25px;">
+                <a href="register.html" class="back-link">← Back to Registration</a>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    function validateOTP() {
+        // 1. Get the value the user typed
+        const userEnteredCode = document.getElementById('otp').value;
+        const errorBox = document.getElementById('error-msg');
+        
+        // 2. The "Master Code" we gave them in the popup
+        const masterCode = "202600"; 
+
+        if (userEnteredCode === masterCode) {
+            // 3. Success! Send them to the exam
+            window.location.href = "assessment.html";
+        } else {
+            // 4. Fail! Show the error message
+            errorBox.style.display = "block";
+            
+            // Hide error after 3 seconds
+            setTimeout(() => {
+                errorBox.style.display = "none";
+            }, 3000);
+        }
+    }
+</script>
+
+</body>
+</html>

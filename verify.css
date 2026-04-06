@@ -1,0 +1,66 @@
+/* --- Verification Page Specifics --- */
+
+.verify-content {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.instruction-text {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.instruction-text small {
+    display: block;
+    margin-top: 10px;
+    color: var(--sasulos-gold);
+    font-weight: 600;
+}
+
+/* The 6-digit code input style */
+.code-input-wrapper {
+    margin-bottom: 30px;
+}
+
+#otp {
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    color: var(--sasulos-navy);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+#otp:focus {
+    border-color: var(--sasulos-gold);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+    outline: none;
+}
+
+.error-msg {
+    background-color: #fff5f5;
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+    display: none; /* Controlled by JS */
+}
+
+.back-link {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--sasulos-navy);
+}
