@@ -585,31 +585,36 @@
                 <h1>Send Us Your Enquiry</h1>
                 <div class="line"></div>
                 <form id="enquiry-form">
-                    <div class="form-group">
-                    <label for="name">Full Name </label> <br>
-                    <input type="text" placeholder="eg Kwame Doe" id="name" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="email">Work Email</label> <br>
-                    <input type="email" placeholder="ex: sasulos@xxx.com" id="email" required>
-                    </div>
-                    <div class="form-group">
-                    <label for="">Industry</label><br>
-                    <select name="industry" id="industry" required>
-                        <option value="" disabled selected>Select your industry</option>
-                        <option value="Construction">Construction & Trades</option>
-                        <option value="Healthcare">Healthcare & Nursing</option>
-                        <option value="Logistics">Logistics & Transport</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    </div>
-                     <div class="form-group">
-                    <label for="textarea">Your Message</label> <br>
-                    <textarea name="textarea" id="textarea" required></textarea>
-                    </div>
-                    
-                    <button type="submit">Submit</button>
-                </form>
+    <div class="form-group">
+        <label for="name">Full Name</label> <br>
+        <input type="text" name="Name" placeholder="eg Kwame Doe" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Work Email</label> <br>
+        <input type="email" name="Email" placeholder="ex: sasulos@xxx.com" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="industry">Industry</label><br>
+        <select name="Industry" id="industry" required>
+            <option value="" disabled selected>Select your industry</option>
+            <option value="Construction">Construction & Trades</option>
+            <option value="Healthcare">Healthcare & Nursing</option>
+            <option value="Logistics">Logistics & Transport</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="textarea">Your Message</label> <br>
+        <textarea name="Message" id="textarea" required></textarea>
+    </div>
+    
+    <button type="submit" id="submitBtn">Submit Request</button>
+    
+    <span id="msg" style="display:block; margin-top:10px;"></span>
+</form>
             </section>
 
         </div>
@@ -713,7 +718,35 @@
 
 
 
+        <script>
+            // Paste your Google Apps Script URL between the single quotes below
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxy8MZ7lx8QtVww55pFB25ftaMTxx315VStt7DIOE3e45ll9xMbo9WBhwCGPMDDSHCZjw/exec'
+const form = document.forms['submit-to-google-sheet']
+const btn = document.getElementById("submitBtn")
+const msg = document.getElementById("msg")
 
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  
+  // Show the user something is happening
+  btn.disabled = true
+  btn.innerHTML = "Sending enquiry..."
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Success! We will contact you shortly."
+        btn.innerHTML = "Send Enquiry"
+        btn.disabled = false
+        form.reset() // Clears the form for the next lead
+    })
+    .catch(error => {
+        console.error('Error!', error.message)
+        msg.innerHTML = "Error! Please try again or contact us via WhatsApp."
+        btn.innerHTML = "Send Enquiry"
+        btn.disabled = false
+    })
+})
+        </script>
     <script src="accordion.js"></script>
     <script src="recruitment.js"></script>
     <script src="script.js"></script>
