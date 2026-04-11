@@ -1,0 +1,484 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  background: #f9f9f9;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.fade-out { opacity: 0; }
+.fade-in { opacity: 1; }
+
+
+.hero-overlay {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.5); /* semi-transparent overlay */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  height: 100vh;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+  
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+/* header {
+  background: linear-gradient(135deg, #004080, #007f5f);
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+} */
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background: #ff6600;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.cta-btn:hover {
+  background: #e65c00;
+  transform: scale(1.05);
+}
+.sticky-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #004080;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 1000;
+}
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+section p {
+font-size: 16px;
+color: #6c6c6c;
+line-height: 1.6;
+}
+
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.feature-box {
+  background: #000000;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.conversion{
+  display: flex;
+  gap: 50px;
+
+}
+
+.ready {
+  width: 50%;
+
+}
+
+.conversionimage {
+width: 50%;
+}
+
+.conversionimage img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.process-step {
+  flex: 1 1 220px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007f5f;
+}
+
+.process-step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #004080;
+}
+
+.process-step p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.sector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.sector-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.sector-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+
+.sector-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sector-card ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+}
+
+.sector-card ul li:last-child {
+  border-bottom: none;
+}
+
+
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+.compliance .badges img {
+  height: 60px;
+  margin: 1rem;
+}
+
+.trust .badges img {
+  height: 60px;
+  margin: 1rem;
+}
+form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: grid;
+  gap: 1rem;
+}
+input, select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+footer {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotateBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animation Classes */
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.stagger-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.stagger-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pulse-btn {
+  animation: pulse 2s infinite;
+}
+
+.badge-hover:hover {
+  animation: rotateBadge 1s linear;
+}
+
+/* Image Hover Zoom */
+.sector-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.sector-card:hover img {
+  transform: scale(1.05);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeInUp 0.5s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.progress-bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  width: 25%;
+  background: #007f5f;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.onboarding-step {
+  text-align: center;
+}
+
+.onboarding-step h3 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+
+
+.onboarding-step button {
+  background: #ff6600;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.onboarding-step button:hover {
+  background: #e65c00;
+}
+.onboarding-step h3 {
+  color: #004080;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.onboarding-step input {
+  width: 90%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+ .onboarding-step select {
+  width: 95%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.onboarding-step label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.onboarding-step button {
+  background: #ff6600;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.onboarding-step button:hover {
+  background: #e65c00;
+}
+
+
+.success-screen {
+  text-align: center;
+  padding: 2rem;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.success-screen h3 {
+  color: #007f5f;
+  margin-bottom: 1rem;
+}
+
+.success-screen p {
+  color: #333;
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.phone-field select {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.phone-field input {
+  flex: 2;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+
+.phone-field select {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+
+.phone-field select:focus,
+.phone-field input:focus {
+  border-color: #007f5f;
+  outline: none;
+  background-color: #fff;
+}

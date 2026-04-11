@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SasulosConsult Limited | Global Skilled Labour Supply</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="international-recruitment-ghana.css">
+</head>
+<body>
+
+  <div class="sticky-bar" style="display: none;">
+    <button class="cta-btn">Request Skilled Workers</button>
+  </div>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline class="hero-video" id="heroVideo">
+      <source src="pics/longhaul.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <div>
+        <img src="pics/logo-dark.png" alt="SasulosConsult Logo" width="80" style="margin-bottom: 20px;">
+        <h1>Your Strategic Partner for Skilled Ghanaian Labour Supply</h1>
+        <p>Helping businesses across Australia, the middle East and Europe maintain strong, reliable teams by connecting them with skilled professionals from Ghana.</p>
+        <a href="https://wa.me/233542381294?text=Hello!%20I%20am%20interested%20in%20your%20labour%20supply%20services." target="_blank" style="text-decoration: none;">
+  <button class="cta-btn">Chat with us on WhatsApp</button>
+</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="onboardingModal" class="modal">
+    <form id="onboardingForm" class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      
+      <div class="progress-bar">
+        <span id="progress"></span>
+      </div>
+      
+      <div class="onboarding-step" id="step1">
+        <h3>Step 1: Company Verification</h3>
+        <input type="text" name="companyName" placeholder="Legal Company Name" required>
+        <input type="text" name="businessRegistration" placeholder="Business Registration Number" required>
+        <input type="text" name="countryOfIncorporation" placeholder="Country of Incorporation" required>
+        <select name="industrySector" required>
+          <option value="">Select Industry Sector</option>
+          <option>Construction & Engineering</option>
+          <option>Healthcare</option>
+          <option>Logistics</option>
+          <option>Hospitality</option>
+        </select>
+        <button type="button" onclick="nextStep(2)">Next</button>
+      </div>
+      
+      <div class="onboarding-step" id="step2" style="display:none;">
+        <h3>Step 2: Authorized Contact</h3>
+        <input type="text" name="authorizedName" placeholder="Full Name of Representative" required>
+        <input type="text" name="authorizedPosition" placeholder="Position / Role" required>
+        <input type="email" name="companyEmail" placeholder="Official Company Email" required>
+        <div class="phone-field">
+          <select name="phoneCode" required>
+            <option value="+233">+233</option>
+            <option value="+44">+44</option>
+            <option value="+61">+61</option>
+            <option value="+49">+49</option>
+          </select>
+          <input type="tel" name="phone" placeholder="WhatsApp number" required>
+        </div>
+        <button type="button" onclick="nextStep(3)">Next</button>
+      </div>
+      
+      <div class="onboarding-step" id="step3" style="display:none;">
+        <h3>Step 3: Labour Requirements</h3>
+        <select name="sector" required>
+          <option value="">Select Labour Sector</option>
+          <option>Construction</option>
+          <option>Healthcare</option>
+          <option>Logistics</option>
+          <option>Hospitality</option>
+        </select>
+        <input type="text" name="specificRoles" placeholder="e.g. Masons, Nurses, Drivers" required>
+        <input type="number" name="numberOfWorkers" placeholder="Number of Workers Needed" required>
+        <input type="date" name="expectedStartDate" required>
+        <button type="button" onclick="nextStep(4)">Next</button>
+      </div>
+      
+      <div class="onboarding-step" id="step4" style="display:none;">
+        <h3>Step 4: Compliance</h3>
+        <p>Confirm ethical recruitment adherence.</p>
+        <label style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+          <input type="checkbox" name="compliance" style="width: auto;" required> I agree to ethical terms
+        </label>
+        <button type="button" onclick="nextStep(5)">Next</button>
+      </div>
+      
+      <div class="onboarding-step" id="step5" style="display:none;">
+        <h3>Final Confirmation</h3>
+        <p>Check your details before submitting.</p>
+        <label style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+          <input type="checkbox" name="finalConfirmation" style="width: auto;" required> I confirm accuracy
+        </label>
+        <button type="submit" class="cta-btn">Submit Request</button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <section class="trust">
+    <div class="badges">
+      <img src="pics/logo-dark2.webp" alt="Compliance Badge">
+      <img src="pics/thelogo (5).png" alt="Certification Badge">
+    </div>
+    <h2>Fully Licensed & Internationally Compliant Recruitment Agency</h2>
+    <p>We specialize in supplying vetted, trained, and dependable workers to companies across Europe, Australia, and the Middle East.</p>
+    <div class="features">
+      <div class="feature-box">✅ End-to-end recruitment support</div>
+      <div class="feature-box">✅ Skilled workforce across industries</div>
+      <div class="feature-box">✅ Ethical and reliable processes</div>
+      <div class="feature-box">✅ International track record</div>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    <p>&copy; 2026 SasulosConsult Limited, Ghana | Ethical Recruitment Standards</p>
+  </footer>
+
+  <script src="international-recruitment-ghana.js"></script>
+</body>
+</html>
