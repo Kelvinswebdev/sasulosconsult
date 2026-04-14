@@ -482,3 +482,12 @@ footer {
   outline: none;
   background-color: #fff;
 }
+
+.ourstory {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin: auto;
+}

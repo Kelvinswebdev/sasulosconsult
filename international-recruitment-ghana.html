@@ -29,80 +29,15 @@
     </div>
   </header>
 
-  <div id="onboardingModal" class="modal">
-    <form id="onboardingForm" class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      
-      <div class="progress-bar">
-        <span id="progress"></span>
-      </div>
-      
-      <div class="onboarding-step" id="step1">
-        <h3>Step 1: Company Verification</h3>
-        <input type="text" name="companyName" placeholder="Legal Company Name" required>
-        <input type="text" name="businessRegistration" placeholder="Business Registration Number" required>
-        <input type="text" name="countryOfIncorporation" placeholder="Country of Incorporation" required>
-        <select name="industrySector" required>
-          <option value="">Select Industry Sector</option>
-          <option>Construction & Engineering</option>
-          <option>Healthcare</option>
-          <option>Logistics</option>
-          <option>Hospitality</option>
-        </select>
-        <button type="button" onclick="nextStep(2)">Next</button>
-      </div>
-      
-      <div class="onboarding-step" id="step2" style="display:none;">
-        <h3>Step 2: Authorized Contact</h3>
-        <input type="text" name="authorizedName" placeholder="Full Name of Representative" required>
-        <input type="text" name="authorizedPosition" placeholder="Position / Role" required>
-        <input type="email" name="companyEmail" placeholder="Official Company Email" required>
-        <div class="phone-field">
-          <select name="phoneCode" required>
-            <option value="+233">+233</option>
-            <option value="+44">+44</option>
-            <option value="+61">+61</option>
-            <option value="+49">+49</option>
-          </select>
-          <input type="tel" name="phone" placeholder="WhatsApp number" required>
-        </div>
-        <button type="button" onclick="nextStep(3)">Next</button>
-      </div>
-      
-      <div class="onboarding-step" id="step3" style="display:none;">
-        <h3>Step 3: Labour Requirements</h3>
-        <select name="sector" required>
-          <option value="">Select Labour Sector</option>
-          <option>Construction</option>
-          <option>Healthcare</option>
-          <option>Logistics</option>
-          <option>Hospitality</option>
-        </select>
-        <input type="text" name="specificRoles" placeholder="e.g. Masons, Nurses, Drivers" required>
-        <input type="number" name="numberOfWorkers" placeholder="Number of Workers Needed" required>
-        <input type="date" name="expectedStartDate" required>
-        <button type="button" onclick="nextStep(4)">Next</button>
-      </div>
-      
-      <div class="onboarding-step" id="step4" style="display:none;">
-        <h3>Step 4: Compliance</h3>
-        <p>Confirm ethical recruitment adherence.</p>
-        <label style="display: flex; align-items: center; gap: 10px; justify-content: center;">
-          <input type="checkbox" name="compliance" style="width: auto;" required> I agree to ethical terms
-        </label>
-        <button type="button" onclick="nextStep(5)">Next</button>
-      </div>
-      
-      <div class="onboarding-step" id="step5" style="display:none;">
-        <h3>Final Confirmation</h3>
-        <p>Check your details before submitting.</p>
-        <label style="display: flex; align-items: center; gap: 10px; justify-content: center;">
-          <input type="checkbox" name="finalConfirmation" style="width: auto;" required> I confirm accuracy
-        </label>
-        <button type="submit" class="cta-btn">Submit Request</button>
-      </div>
-    </form>
-  </div>
+
+  <section class="ourstory">
+    <div class="ourstoryleft">
+      <h2>Our Story</h2>
+      <p>Founded in 2018, SasulosConsult Limited has rapidly become a trusted name in international recruitment. We are committed to ethical practices and compliance with global standards, ensuring that our clients receive skilled workers who are ready to contribute to their success.</p>
+    </div>
+    <div class="ourstoryright">
+      <img src="pics/1757257491277 (1).jpg" alt="Our Story Image">
+  </section>
 
 
 
