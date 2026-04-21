@@ -483,15 +483,27 @@ footer {
   background-color: #fff;
 }
 
+.heading{
+  text-align: center;
+font-weight: lighter;
+color: #004080;
+margin-top: 100px;
+font-size: 1rem;
+}
+
 .ourstory {
   display: flex;
   gap: 2rem;
   align-items: center;
   margin-top: 4rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-.ourstoryleft{
+.ourstoryleft, .ourstoryright{
   width: 50%;
+}
+
+.ourstoryright img{
+  width: 100%;
 }
