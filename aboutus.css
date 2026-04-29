@@ -382,6 +382,16 @@ nav ul li:hover .dropdown-menu {
   }
   }
 
+  @media (max-width: 992px) {
+  .section1new {
+    flex-direction: column-reverse;
+    text-align: left;
+    padding: 0px 20px;
+    gap: 40px;
+  }
+  }
+
+
 .sectioncontentleft{
     display: flex;
     gap: 10px;
