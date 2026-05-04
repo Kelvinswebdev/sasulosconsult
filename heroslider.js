@@ -4,11 +4,11 @@ const paragraph = document.getElementById('hero-paragraph');
 
 const messages = [
   {
-    title: "We supply competent Ghanaian manpower to Australia and the middle-east most demanding industries",
+    title: "Your Trusted Recruitment Partner in Ghana.",
     text: "Reliable Ghanaian workers delivered with structure, integrity, and speed."
   },
   {
-    title: "Connecting your company to Ghana’s most reliable workforce",
+    title: "Access Ghana’s Most  Reliable Skilled Workforce.",
     text: "A trusted bridge between skilled labour and serious employers."
   },
   {
