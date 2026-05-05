@@ -5,7 +5,7 @@ const paragraph = document.getElementById('hero-paragraph');
 const messages = [
   {
     title: "Your Trusted Recruitment Partner in Ghana.",
-    text: "Reliable Ghanaian workers delivered with structure, integrity, and speed."
+    text: "With a strong operational framework and access to large pools of qualified professionals, we help foreign companies hire confidently and efficiently."
   },
   {
     title: "Access Ghana’s Most  Reliable Skilled Workforce.",
